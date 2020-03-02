@@ -15,7 +15,7 @@ debug_log = stdout
 logger = ConsoleLogger(stdout, CoreLogging.Info)
 global_logger(logger)
 
-export vrPCA,
+export VrPCA,
         SvdMode,
         LowRankApproxMc,
         reduceToRank,

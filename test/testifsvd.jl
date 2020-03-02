@@ -42,7 +42,7 @@ function testifastsvd_epsil(mat)
     matApprox = U.value * diagm(S.value) * Vt.value
     relerrMat = norm(matApprox - mat)/norm(mat)
     @info "delta mat after LowRankApproxMc reduce" deltaS  relerrMat
-    relerr < 0.05 ? true : false
+    relerrMat < 0.05 ? true : false
 end
 
 
@@ -79,5 +79,5 @@ function testifastsvd_rank(mat,  k)
     relerrMat = norm(matApprox - mat)/norm(mat)
     @info "delta mat after LowRankApproxMc reduce"  norm(matApprox - mat) norm(mat)
     @info "relative residual error" norm(matApprox - mat)/norm(mat)
-    relerr < 0.05 ? true : false
+    relerrMat < 0.05 ? true : false
 end
