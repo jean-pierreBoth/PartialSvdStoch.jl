@@ -29,7 +29,7 @@ Our implementation deviates slightly from the paper as we let the final rank obt
 This method is not as fast as the *LowRankApprox* package but can provide a competitive approximation when the matrix of data has large variations of L2-norm between columns as the sampling construct the approximation with the largest contribution of the L2-norm of the data matrix.
 (Cf tests for examples).
 
-The function *reduceToEpsil* computes an approximation B at a given precision $\epsilon$ :  $\frac{E(|| data - B||_{2})}{E(|| data ||_{2}} <=  \epsilon$
+The function *reduceToEpsil* computes an approximation B at a given precision $\epsilon$ :  $\frac{E(|| data - B||_{2})}{E(|| data ||_{2})} <=  \epsilon$
 and determines the rank accordingly.
 
 The function *reduceToRank* needs usually 2 iterations to achieve a good compromise and that is the default used in the code. Run times are of the order of 4.5s for a (10000, 20000) matrix with 2 iterations for a rank = 100 approximation.
